@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 import os
 from pathlib import Path
-
+from django.contrib.messages import constants as messages
 import dj_database_url
 if os.path.isfile("env.py"):
     import env
@@ -29,7 +29,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 # ALLOWED_HOSTS = ['django-blog-by-wanwisa.herokuapp.com', 'localhost']
 ALLOWED_HOSTS = ['8000-kay13051976-django-blog-58zyd33ohg.us2.codeanyapp.com']
@@ -43,12 +43,29 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'django.contrib.sites',
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
+    'crispy_forms',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
     'django_summernote',
     'blog',
 ]
+SITE_ID = 1
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+
+MESSAGE_TAGS = {
+        message.DEBUG: 'alert-info',
+        message.INFO: 'alert-info',
+        message.SUCCESS: 'alert-success',
+        message.WARNING: 'alert_warning',
+        message.ERROR: 'alert_danger',
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
