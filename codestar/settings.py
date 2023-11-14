@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
-    'crispy_forms',
+    # 'crispy_forms',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -60,11 +60,11 @@ LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
 MESSAGE_TAGS = {
-        message.DEBUG: 'alert-info',
-        message.INFO: 'alert-info',
-        message.SUCCESS: 'alert-success',
-        message.WARNING: 'alert_warning',
-        message.ERROR: 'alert_danger',
+        messages.DEBUG: 'alert-info',
+        messages.INFO: 'alert-info',
+        messages.SUCCESS: 'alert-success',
+        messages.WARNING: 'alert_warning',
+        messages.ERROR: 'alert_danger',
 }
 
 MIDDLEWARE = [
