@@ -34,7 +34,7 @@ class PostDetail(View):
             },
         )
 
-    def post(self, request, slug, *slug, *args, **kwargs):
+    def post(self, request, slug, slug, *args, **kwargs):
 
         querset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
