@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
-    # 'crispy_forms',
+    'crispy_forms',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -59,6 +59,8 @@ SITE_ID = 1
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # MESSAGE_TAGS = {
 #         messages.DEBUG: 'alert-info',
