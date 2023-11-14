@@ -54,18 +54,19 @@ INSTALLED_APPS = [
     'django_summernote',
     'blog',
 ]
+
 SITE_ID = 1
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
-MESSAGE_TAGS = {
-        messages.DEBUG: 'alert-info',
-        messages.INFO: 'alert-info',
-        messages.SUCCESS: 'alert-success',
-        messages.WARNING: 'alert_warning',
-        messages.ERROR: 'alert_danger',
-}
+# MESSAGE_TAGS = {
+#         messages.DEBUG: 'alert-info',
+#         messages.INFO: 'alert-info',
+#         messages.SUCCESS: 'alert-success',
+#         messages.WARNING: 'alert_warning',
+#         messages.ERROR: 'alert_danger',
+# }
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
