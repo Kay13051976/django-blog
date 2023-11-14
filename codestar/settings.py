@@ -31,6 +31,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+X_FRAME_OPTIONS = 'SAMEORIGIN'
+
 # ALLOWED_HOSTS = ['django-blog-by-wanwisa.herokuapp.com', 'localhost']
 ALLOWED_HOSTS = ['8000-kay13051976-django-blog-58zyd33ohg.us2.codeanyapp.com']
 
@@ -62,13 +64,13 @@ LOGOUT_REDIRECT_URL = '/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-# MESSAGE_TAGS = {
-#         messages.DEBUG: 'alert-info',
-#         messages.INFO: 'alert-info',
-#         messages.SUCCESS: 'alert-success',
-#         messages.WARNING: 'alert_warning',
-#         messages.ERROR: 'alert_danger',
-# }
+MESSAGE_TAGS = {
+        messages.DEBUG: 'alert-info',
+        messages.INFO: 'alert-info',
+        messages.SUCCESS: 'alert-success',
+        messages.WARNING: 'alert-warning',
+        messages.ERROR: 'alert-danger',
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
